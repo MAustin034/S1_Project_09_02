@@ -69,13 +69,13 @@
                 <input type="text" name="state" id="stateBox" required>
 
                 <label for="zip">ZIP/Postal Code</label>
-                <input type="text" name="zip" id="zipBox">
+                <input type="text" name="zip" id="zipBox" pattern="^\d{5}(-\d{4})?$ ">
 
                 <label for="country">Country</label>
-                <input type="text" name="country" id="countryBox" required>
+                <input type="text" name="country" id="countryBox" required value="United States">
 
                 <label for="phone">Phone</label>
-                <input type="tel" name="phone" id="phoneBox" required>
+                <input type="tel" name="phone" id="phoneBox" required pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$">
 
 
                 <datalist id="stateList">
@@ -133,6 +133,35 @@
                 </datalist>
 
             </fieldset>
+
+            <fieldset id="creditCard">
+                <legend>Credit Card (Required)</legend>
+
+                <fieldset>
+                    <label class="cardLabel" for="cardLabel">
+                        <input type="radio" value="amex">
+                        <img src="sb_amex.png" alt="">
+                    </label>
+                    <label class="cardLabel" for="cardLabel">
+                        <input type="radio" value="discover">
+                        <img src="sb_discover.png" alt="">
+                    </label>
+                    <label class="cardLabel" for="cardLabel">
+                        <input type="radio" value="master">
+                        <img src="sb_master.png" alt="">
+                    </label>
+                    <label class="cardLabel" for="cardLabel">
+                        <input type="radio" value="visa">
+                        <img src="sb_visa.png" alt="">
+                    </label>
+
+                </fieldset>
+
+                <label for="cardBox">Credit Card Number</label>
+                <input type="text" name="cardNumber" id="cardBox" required pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$">
+            </fieldset>
+
+
         </form>
 
         <aside>
