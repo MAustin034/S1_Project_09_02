@@ -13,4 +13,51 @@
 
 
 /* Validation Styles */
+button {
+    text-align: center;
+    width: 100%;
+}
 
+input:not([type='radio']) {}
+
+input:focus,
+select:focus,
+textarea:focus {}
+
+
+
+input#firstBox:focus:invalid,
+input#lastBox:focus:invalid,
+input#streetBox:focus:invalid,
+input#street2:focus:invalid,
+input#cityBox:focus:invalid,
+input#stateBox:focus:invalid,
+input#zipBox:focus:invalid,
+input#countryBox:focus:invalid,
+input#phoneBox:focus:invalid,
+input#stateList:focus:invalid,
+input#creditCard:focus:invalid,
+input#cardBox:focus:invalid,
+input#monthList:focus:invalid,
+input#yearList:focus:invalid,
+input#cscBox:focus:invalid {
+    background: rgb(255, 245, 215) url(sb_invalid.png) right/contain no-repeat;
+}
+
+input#firstBox:focus:valid,
+input#lastBox:focus:valid,
+input#streetBox:focus:valid,
+input#street2:focus:valid,
+input#cityBox:focus:valid,
+input#stateBox:focus:valid,
+input#zipBox:focus:valid,
+input#countryBox:focus:valid,
+input#phoneBox:focus:valid,
+input#stateList:focus:valid,
+input#creditCard:focus:valid,
+input#cardBox:focus:valid,
+input#monthList:focus:valid,
+input#yearList:focus:valid,
+input#cscBox:focus:valid {
+    background: rgb(215, 255, 215) url(sb_valid.png) right/contain no-repeat;
+}
